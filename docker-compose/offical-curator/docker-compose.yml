@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+    curator:
+       image: curator:5
+       container_name: curator
+       restart: always
+       command: --config /curator/curator.yml /delete_index.yaml
+#       command: --config /curator/curator.yml /create_index.yml 
+       volumes:
+         - ./curator.yml:/curator/curator.yml
+         - ./create_index.yml:/create_index.yml
+         - ./delete_index.yaml:/delete_index.yaml

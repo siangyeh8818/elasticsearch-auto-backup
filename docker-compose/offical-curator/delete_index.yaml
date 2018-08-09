@@ -1,0 +1,14 @@
+actions:
+  1:
+    action: delete_indices
+    description: >-
+      Delete indices older than 45 days (based on index name), for logstash-
+      prefixed indices. Ignore the error if the filter does not result in an
+      actionable list of indices (ignore_empty_list) and exit cleanly.
+    options:
+      ignore_empty_list: True
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: emotibot-records-66a18b5139324b0383406aa01abe600d-2018-08-03

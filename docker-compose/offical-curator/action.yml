@@ -1,0 +1,17 @@
+actions:
+  1:
+    action: delete_indices
+    description: remove topbeat indices
+    options:
+      ignore_empty_list: True
+      timeout_override:
+      continue_if_exception: False
+      disable_action:
+    filters:
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 7
+      exclude:

@@ -1,0 +1,32 @@
+{
+    "index_patterns": [
+        "emotibot-sessions-*"
+    ],
+    "version": 20180803,
+    "mappings": {
+        "doc": {
+            "properties": {
+                "enterprise_id": {
+                    "type": "keyword"
+                },
+                "app_id": {
+                    "type": "keyword"
+                },
+                "user_id": {
+                    "type": "keyword"
+                },
+                "session_id": {
+                    "type": "keyword"
+                },
+                "start_time": {
+                    "type": "date",
+                    "format": "epoch_second"
+                },
+                "end_time": {
+                    "type": "date",
+                    "format": "epoch_second"
+                }
+            }
+        }
+    }
+}

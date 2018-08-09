@@ -1,0 +1,94 @@
+{
+    "index_patterns": [
+        "emotibot-records-*"
+    ],
+    "version": 20180802,
+    "mappings": {
+        "doc": {
+            "properties": {
+                "enterprise_id": {
+                    "type": "keyword"
+                },
+                "app_id": {
+                    "type": "keyword"
+                },
+                "user_id": {
+                    "type": "keyword"
+                },
+                "session_id": {
+                    "type": "keyword"
+                },
+                "user_q": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "std_q": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "answer": {
+                    "type": "nested"
+                },
+                "module": {
+                    "type": "keyword"
+                },
+                "emotion": {
+                    "type": "keyword"
+                },
+                "emotion_score": {
+                    "type": "double"
+                },
+                "intent": {
+                    "type": "keyword"
+                },
+                "intent_score": {
+                    "type": "double"
+                },
+                "log_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd'T'HH:mm:ss.000Z||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "score": {
+                    "type": "double"
+                },
+                "host": {
+                    "type": "ip"
+                },
+                "unique_id": {
+                    "type": "keyword"
+		        },
+                "note": {
+                    "type": "text",
+                    "analyzer": "ik_max_word",
+                    "search_analyzer": "ik_max_word",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword"
+                        }
+                    }
+		        },
+		        "platform": {
+                    "type": "keyword"
+		        },
+                "brand": {
+                    "type": "keyword"
+                },
+                "sex": {
+                    "type": "keyword"
+                }
+            }
+        }
+    }
+}

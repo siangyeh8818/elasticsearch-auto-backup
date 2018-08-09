@@ -1,0 +1,13 @@
+actions:
+  1:
+    action: create_index
+    description: Create the index as named, with the specified extra settings.
+    options:
+      name: test-20180801
+      extra_settings:
+        settings:
+          number_of_shards: 2
+          number_of_replicas: 1
+      timeout_override:
+      continue_if_exception: False
+      disable_action: False
