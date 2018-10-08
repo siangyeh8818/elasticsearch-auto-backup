@@ -93,7 +93,7 @@ effmonth = int(str_effmonth)
 logger.info("Setting effictive range for data in elasticsearch : %s"%effmonth)
 filernow = now + dateutil.relativedelta.relativedelta(months=-effmonth)
 short_date = str(filernow).split()[0]
-yestday_date = str(get_yesterday())
+yestday_date = get_yesterday()
 
 logger.info("If index-name contain  %s , this index will be delet"%short_date)
 logger.info("If index-name contain  %s , this index will be backup"%yestday_date)

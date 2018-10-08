@@ -1,11 +1,11 @@
 version: '2.1'
 services:
     curator:
-       image: elasticsearch-management:8
+       image:  siangyeh8818/elasticsearch-auto-backup:v1
        container_name: elasticsearch-management
        restart: always
        environment:
-         - ES_SOURCE_IP=172.16.106.131
+         - ES_SOURCE_IP=172.16.106.130
          - ES_SOURCE_PORT=9200
          - LOG_EFFECTIVE_MONTH=1
          - ES_MANAGEMENT_LOG_LEVEL=debug

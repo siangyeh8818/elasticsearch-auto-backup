@@ -1,9 +1,10 @@
 FROM siangyeh8818/python-base-environment:3.6
 
-RUN yum -y install npm crontabs.noarch net-tools
+RUN yum -y install npm crontabs.noarch net-tools 
 RUN npm install elasticdump -g
 RUN wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate
 RUN python get-pip.py
+#RUN pip install -I packages
 RUN pip install -U elasticsearch-curator==5.5.4
 RUN mkdir /code
 WORKDIR /code
