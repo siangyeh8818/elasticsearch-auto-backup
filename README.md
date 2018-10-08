@@ -20,7 +20,7 @@
 ------
 * ES_SOURCE_IP : elasticsearch的IP
 * ES_SOURCE_PORT : elasticsearch暴露的port
-* LOG_EFFECTIVE_MONTH : 數字 , 代表月份 , 例如設為1 , 會清除一個月前的index (清除前先備份)
+* LOG_EFFECTIVE_MONTH : 數字 , 代表月份 , 例如設為1 , 會清除一個月前的index (ex:今天若是2018-10-08 , 會清除2018-09-08這天的index)
 * ES_MANAGEMENT_LOG_LEVEL : log等級 , 目前未完成 , 可以無視此變數
 
 限制 :
