@@ -9,7 +9,8 @@ services:
          - ES_SOURCE_PORT=9200
          - LOG_EFFECTIVE_MONTH=1
          - ES_MANAGEMENT_LOG_LEVEL=debug
-#       volumes:
+       volumes:
+          - /opt/elasticsearch-backup:/elasticsearch-backup
 #         - ./curator.yml:/curator/curator.yml
 #         - ./create_index.yml:/create_index.yml
 #         - ./delete_index.yaml:/delete_index.yaml
