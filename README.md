@@ -7,7 +7,7 @@
 
 實現功能
 ------
-* 自動備份要刪除的index 成json檔 (供後續回復資料用)
+* 自動備份昨天的index 成json檔 (以index名稱做日期判定)
 * 自動刪除過舊index
 * 備份週期以容器內的crond去實現
 * 參數設定目前是以"月"為單位清除過去的elasticsearch index
